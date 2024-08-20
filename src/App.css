@@ -45,3 +45,14 @@ text-decoration: none;
   max-width: 300px; 
   margin: 0 auto; 
 }
+.card-img-top {
+  height: 75%;
+  object-fit: cover;
+}
+.title-overflow{
+  height: 2em;    
+  overflow:hidden;   
+  text-overflow:ellipsis;   
+  white-space: nowrap;    
+  cursor: pointer;     
+}

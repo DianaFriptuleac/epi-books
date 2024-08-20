@@ -14,7 +14,7 @@ function App() {
       </header>
    
     <main>
-    <h1 className='text-center'> Epicode Books</h1>
+    <h1 className='text-center mt-3'> Epicode Books</h1>
     <Welcome className='small-alert'/>
     <div>
       <AllTheBooks/>
