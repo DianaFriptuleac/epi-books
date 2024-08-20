@@ -36,7 +36,7 @@
     transform: rotate(360deg);
   }
 }
-.footerLi li{
+.footerLi ul li{
 text-decoration: none;
 }
 .small-alert {
@@ -55,4 +55,12 @@ text-decoration: none;
   text-overflow:ellipsis;   
   white-space: nowrap;    
   cursor: pointer;     
+}
+.expanded-text{
+  height: auto;             
+  white-space:normal;     
+  } 
+
+.myHeader{
+  background-color:rgb(242, 233, 222);
 }

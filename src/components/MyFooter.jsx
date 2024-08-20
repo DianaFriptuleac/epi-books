@@ -1,11 +1,12 @@
 import {Col, Container, Row } from "react-bootstrap"
+
 const MyFooter = function(){
     return(
      <footer className="bg-dark">
         <Container>
         <Row>
             <Col className="text-center">
-            <ul>
+            <ul className="list-unstyled mt-3">
                 <li className="text-light">
                   Sponsor
                 </li>

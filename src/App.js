@@ -9,13 +9,16 @@ import AllTheBooks from './components/AllTheBooks';
 function App() {
   return (
     <>
-      <header>
+      <header className='myHeader'>
     <MyNav/>
+    <h1 className='text-center mt-3 display-2 fw-bold'> Epicode Books</h1>
+    <Welcome className='small-alert'/>
       </header>
    
     <main>
-    <h1 className='text-center mt-3'> Epicode Books</h1>
-    <Welcome className='small-alert'/>
+    <div>
+   
+    </div>
     <div>
       <AllTheBooks/>
     </div>
