@@ -1,15 +1,25 @@
-import {Container, ListGroup } from "react-bootstrap"
+import {Col, Container, Row } from "react-bootstrap"
 const MyFooter = function(){
     return(
-        <footer className="bg-dark">
-        <Container fluid>
-         <ListGroup as="ul">
-      <ListGroup.Item as="li">Cras justo odio</ListGroup.Item>
-      <ListGroup.Item as="li">Cras justo odio</ListGroup.Item>
-      <ListGroup.Item as="li">Cras justo odio</ListGroup.Item>
-    </ListGroup>
-            </Container>
-            </footer>
+     <footer className="bg-dark">
+        <Container>
+        <Row>
+            <Col className="text-center">
+            <ul>
+                <li className="text-light">
+                  Sponsor
+                </li>
+                <li className="text-light">
+                  Social
+                </li>
+                <li  className="text-light">
+                  Contatti
+                </li>
+            </ul>
+            </Col>
+        </Row>
+        </Container>
+     </footer>
     )
 }
 export default MyFooter

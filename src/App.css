@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+.footerLi li{
+text-decoration: none;
+}
+.small-alert {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem; 
+  max-width: 300px; 
+  margin: 0 auto; 
+}
