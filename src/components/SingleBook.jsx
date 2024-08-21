@@ -21,8 +21,7 @@ class SingleBook extends Component {
 
 render() {
     return(
-        <Container>
-            <Row className="gy-4 my-3">
+    
                         <Col xs={12} md ={6} lg={3} key={this.props.libro.asin}>
                         <Card
                             className={`mb-4 g-4 h-100 ${this.state.selected ? 'border border-danger border-3' : ''}`}
@@ -33,7 +32,7 @@ render() {
                         <Card.Body className="pb-0">
                           <Card.Title className="title-overflow">{this.props.libro.title}</Card.Title>
                           <div className="d-flex justify-content-center">
-                          <Button variant="info" className="text-center px-3 text-light ">
+                          <Button variant="info" className="text-center px-3 text-light mb-3">
                            {this.props.libro.price} $
                           </Button>
                           </div>
@@ -41,8 +40,8 @@ render() {
                       </Card>
                       </Col>
      
-            </Row>
-        </Container>
+         
+       
     )
 }
 }
