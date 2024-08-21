@@ -7,6 +7,7 @@ import Welcome from './components/Welcome';
 import AllTheBooks from './components/AllTheBooks';
 import SingleBook from './components/SingleBook';
 import fantasy from './assets/books/fantasy.json'
+import BookList from './components/BookList';
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
     </div>
     <div>
       {/*<AllTheBooks/>*/}
-      <SingleBook libro={fantasy[0]} />
+      {/*<SingleBook libro={fantasy[0]} />*/}
+      <BookList libri ={fantasy}/>
     </div>
     </main>
     <footer>
