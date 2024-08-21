@@ -24,7 +24,7 @@ render() {
     
                         <Col xs={12} md ={6} lg={3} key={this.props.libro.asin}>
                         <Card
-                            className={`mb-4 g-4 h-100 ${this.state.selected ? 'border border-danger border-3' : ''}`}
+                            className={`mb-4 h-100 ${this.state.selected ? 'border border-danger border-3' : ''}`}
                             onClick={this.toggleSelected}
                             style={{ cursor: "pointer" }} 
                         >

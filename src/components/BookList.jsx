@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Container, Row, Col, Form} from "react-bootstrap";
+import { Container, Row, Form} from "react-bootstrap";
 import SingleBook from "./SingleBook";
 
 class BookList extends Component {
@@ -27,20 +27,18 @@ class BookList extends Component {
     const filteredBook = this.filterBooks()
     return (
       <Container>
-        <Row className="gy-4 my-3">
-            <Col>
+        <Row className="my-3 justify-content-center">
             <Form.Control
             type="text" placeholder = "Cerca titolo libro"
+            className="w-75"
             value = {this.state.searchBook}
             onChange = {this.handleSearch}>
             </Form.Control>
-            </Col>
             </Row>
-            <Row className="gy-4 my-3">
+           <Row className="gy-4">
           {filteredBook.map((book) => (
-            <Col xs={12} md={6} lg={4} key={book.asin}>
-            <SingleBook  libro={book} />
-            </Col>
+            <SingleBook   key={book.asin} libro={book} />
+         
           ))}
         </Row>
       </Container>
