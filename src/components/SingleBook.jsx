@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Col, Card, Button } from "react-bootstrap";
+import CommentArea from "./CommentArea";
+
 
 class SingleBook extends Component {
   state = {
@@ -44,9 +46,12 @@ class SingleBook extends Component {
                 {this.props.libro.price} $
               </Button>
             </div>
+            {/*Mostro CommentArea solo se selected e true */}
+           {this.state.selected && <CommentArea asin = {this.props.libro.asin}/> }
           </Card.Body>
         </Card>
       </Col>
+
     );
   }
 }
