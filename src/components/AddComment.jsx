@@ -6,14 +6,14 @@ class AddComment extends Component {
     personalComment: {
       comment: '',
       rate: '',
-      elementId: this.props.asin,
+      elementId: this.props.asin,  //prendo this.props.asin da  fetch(`https://striveschool-api.herokuapp.com/api/comments/${this.props.asin}` del CommentArea
     }
   };
 
   handleInputChange = (e, property) => {
     this.setState({
       personalComment: {
-        ...this.state.personalComment,
+        ...this.state.personalComment,  //modo in cui trascinare qui dentro tutto il contenuto di un altro oggetto
         [property]: e.target.value,
       }
     });
@@ -26,7 +26,7 @@ class AddComment extends Component {
       method: 'POST',
       headers: {
         Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmEzNjJlYWYyNjBjYzAwMTVjYzBkZWUiLCJpYXQiOjE3MjQzMjc1NjQsImV4cCI6MTcyNTUzNzE2NH0.g888918CD5qke7EIIwh90BjBGeHnwAIHTubT-bzC7fI",
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json',  //sempre questo
       },
       body: JSON.stringify(this.state.personalComment),
     })

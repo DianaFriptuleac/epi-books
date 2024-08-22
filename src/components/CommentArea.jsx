@@ -8,6 +8,8 @@ class CommentArea extends Component {
   };
 
   fetchComments = () => {
+
+    // fetch("https://striveschool-api.herokuapp.com/api/comments/" + this.props.asin
     fetch(`https://striveschool-api.herokuapp.com/api/comments/${this.props.asin}`, {
       headers: {
         Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmEzNjJlYWYyNjBjYzAwMTVjYzBkZWUiLCJpYXQiOjE3MjQzMjc1NjQsImV4cCI6MTcyNTUzNzE2NH0.g888918CD5qke7EIIwh90BjBGeHnwAIHTubT-bzC7fI",
