@@ -10,6 +10,7 @@ class BookList extends Component {
 
     state = {
         searchBook: '',
+        selectedBookAsin: null, // Stato per tracciare il libro selezionato
     }
 
     //cambiamento del campo di recerca 
@@ -26,6 +27,12 @@ class BookList extends Component {
         book.title.toLowerCase().includes(searchBook.toLowerCase()))
 
     }
+      // Gestione della selezione del libro
+  handleBookSelection = (asin) => {
+    this.setState({
+      selectedBookAsin: this.state.selectedBookAsin === asin ? null : asin,
+    });
+  };
 
   render() {
     const filteredBook = this.filtraLibri()
@@ -34,16 +41,19 @@ class BookList extends Component {
         <Row>
             <Col className="my-3 d-flex justify-content-center">
             <Form.Control
-            type="text" placeholder = "Cerca titolo libro"
-            className="w-75"
-            value = {this.state.searchBook}
-            onChange = {this.handleSearch}>
-            </Form.Control>
+              type="text"
+              placeholder="Cerca titolo libro"
+              className="w-75"
+              value={this.state.searchBook}
+              onChange={this.handleSearch}
+            />
             </Col>
             </Row>
            <Row className="gy-4">
           {filteredBook.map((scifiBook) => (
-            <SingleBook   key={scifiBook.asin} libro={scifiBook} />
+            <SingleBook   key={scifiBook.asin} libro={scifiBook} 
+            isSelected={this.state.selectedBookAsin === scifiBook.asin}
+            onBookClick={() => this.handleBookSelection(scifiBook.asin)}/>
          
           ))}
         </Row>

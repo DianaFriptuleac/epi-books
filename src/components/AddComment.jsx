@@ -81,10 +81,11 @@ class AddComment extends Component {
                   value={this.state.personalComment.comment}
                 />
               </Form.Group>
-
-              <Button variant="primary" type="submit" className="mt-3">
+                <div className="d-flex justify-content-center mb-3">
+              <Button variant="success" type="submit" className="mt-3">
                 Invia Commento
               </Button>
+              </div>
             </Form>
           </Col>
         </Row>
